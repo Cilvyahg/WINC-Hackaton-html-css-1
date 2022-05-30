@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Contact</title>
-</head>
-<body>
-     <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
       <nav class="nav-top">
         <ul>
           <li>
@@ -21,18 +21,74 @@
       </nav>
     </header>
 
+    <main>
+      <article class="contact-wrapper">
+        <form name="contact" method="POST" data-netlify="true">
+          <fieldset>
+            <legend><span>Plan a coffee date ☕</span></legend>
+            <div class="label-padding">
+              <label for="name" class="margin-top">Name</label> <br />
+              <input type="text" name="name" /><br />
+
+              <label for="age">Age</label><br />
+              <input type="number" name="age" /><br />
+              <label for="date-of-birth">Date of birth</label><br />
+              <input
+                type="date"
+                name="date-of-birth"
+                placeholder="dd/mm/yyyy"
+                value=""
+                min="01-01-2002"
+              /><br /> 
+              <label for="gender"><strong>What is your gender?</strong></label
+              ><br />
+
+              <input type="radio" name="gender" value="female" />
+              <label for="gender">Female</label><br />
+
+              <input type="radio" name="gender" value="male" />
+              <label for="gender">Male</label><br />
+
+              <input type="radio" name="gender" value="rather not say" />
+              <label for="gender">Rather not say</label>
+              <br />
+              <input type="radio" name="gender" value="i don't know yet" />
+              <label for="gender">I don't know yet</label> <br /> 
+              <label for="email">Email-address</label> <br />
+              <input
+                type="email"
+                placeholder="hellowinc@gmail.com"
+                name="email"
+              /><br />
+              <label for="phone">Phone number</label><br />
+              <input type="tel" name="phone" min="10" /><br /> 
+              <label for="text-area">Your question/comment</label><br />
+              <textarea
+                name="question"
+                id="question"
+                cols="40"
+                rows="10"
+                placeholder="I will try to answer asap"
+              ></textarea
+              ><br />
+              <input
+                type="submit"
+                value="submit"
+                name="submit"
+                class="submit-margin"
+              />
+            </div>
+          </fieldset>
+        </form>
+      </article>
+    </main>
     <footer>
       <nav>
         <a href="https://github.com/Cilvyahg"
-          ><img
-            src="./github.png"
-            class="github-icon"
-            alt="icon github black"
-
+          ><img src="./github.png" class="github-icon" alt="icon github black"
         /></a>
       </nav>
-      <p> &copy; Cillie-code. All rights reserved.</p>
+      <p>&copy; Cillie-code. All rights reserved.</p>
     </footer>
-  
-</body>
+  </body>
 </html>
