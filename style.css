@@ -247,27 +247,35 @@ iframe {
 
 /* CONTACT PAGE WITH FORM*/
 
-.contact-wrapper {
+form#contact {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
   margin: 3rem auto;
-
 }
 
 fieldset {
   border: dashed 2px #273b0c;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 2rem;
+  height: auto; 
+  width: 30%;
+  padding: 1rem;
   background-color: rgba(228, 228, 228, 0.232);
 }
 
-label {
-  display: inline-block;
-  margin-top: 0.4rem;
+.label-padding {
+  margin-top: 0.5rem;
+}
+
+textarea {
+  width: 25rem;
+  height: 15rem
 }
 
 span {
   background-color: #f1d6dc;
-  padding: 0.3em 4rem;
+  padding: 0.3rem;
   border-radius: 100px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -276,8 +284,8 @@ span {
 .submit-margin {
   margin: 1rem auto;
   background-color: #cca169;
+  aspect-ratio: 1;
   width: 5rem;
-  height: 5rem;
   border-radius: 50%;
   border: none;
   display: block;
@@ -297,6 +305,11 @@ span {
       "tricks tricks"
       "extra conclusion";
   }
+
+  fieldset {
+    width: 50%;
+  }
+
 }
 
 /* MEDIA QUERIES DESKTOP */
@@ -327,7 +340,6 @@ span {
   }
 
   .grid-container {
-    border: solid 2px rgb(214, 195, 195);
     margin: 2rem 3rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -360,4 +372,10 @@ span {
     flex-direction: row;
     justify-content: center;
   }
+
+fieldset {
+  width: 40%;
+  height: auto;
+}
+  
 }
