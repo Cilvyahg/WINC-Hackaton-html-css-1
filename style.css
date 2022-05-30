@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffe8d6;
+}
+
+main {
+  margin: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* NAV TOP BAR */
+.nav-top {
+  background-color: #6b705c;
+  border-bottom: solid 2px #273b0c;
+}
+
+.nav-top ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-top li {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  font-family: "Manrope", sans-serif;
+}
+
+.nav-top ul li a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-top ul li a:hover {
+  color: #cca169;
+  font-size: 1.8rem;
+  text-decoration: underline 3px #cca169;
+}
+
+/* HEADER + IMG */
+
+.main-header > h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 3rem;
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.magnifying-glass {
+  /* width: 10%; */
+  max-width: 5%;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.home-photo-wrapper {
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.home-photo {
+  width: 100%;
+  max-height: auto;
+  box-shadow: 0px 0px 30px rgb(24, 13, 28);
+}
+
+/* GRID  */
+.grid-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(1fr, auto);
+  grid-row-gap: 3px;
+  grid-template-areas:
+    "intro"
+    "tricks"
+    "extra"
+    "conclusion";
+}
+
+.grid-container h2 {
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+
+.intro-text-pro,
+.tricks-pro,
+.extra-text,
+.conclusion {
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.intro-text-pro {
+  background-color: #ddbea9;
+  grid-area: intro;
+}
+
+.tricks-pro {
+  background-color: rgba(231, 170, 179, 0.379);
+  grid-area: tricks;
+}
+
+.tricks-pro > h3 {
+  padding-top: 0.4em;
+}
+
+.extra-text {
+  background-color: #cb997e;
+  grid-area: extra;
+}
+
+.conclusion {
+  background-color: #b7b7a4;
+  grid-area: conclusion;
+}
+
+/* FOOTER */
+footer {
+  border-top: 3px solid rgb(54, 74, 28);
+  background-color: #6b705c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: auto;
+  margin-top: 3rem;
+}
+
+footer p {
+  font-size: 1em;
+  color: #fff;
+  font-style: italic;
+}
+
+.github-icon {
+  width: 3rem;
+  height: auto;
+}
+
+/* ABOUT - PAGE  */
+
+.about-me-main {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutme-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: solid 2px black;
+}
+
+/* .about-me-image {
+  border: solid 1px black;
+  max-width: 90%;
+  height: auto;
+} */
+
+.pink_sky {
+  height: auto;
+  width: 50%; 
+  /* je moet altijd 50% breed zijn tenzij je buiten de min of max komt */
+  min-width: 200px;
+  max-width: 700px;
+  border-radius: 200px;
+}
+
+
+.about-me-text {
+  border: 2px solid black;
+  width: 90%;
+  height: auto;
+  padding: 4rem;
+  background-color:rgb(214, 195, 195);
+  margin-top: 2rem;
+
+}
+
+.about-me-text h2 , .random-facts h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+
+.about-me-text, .random-facts {
+  font-size: 1.2rem;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES TABLETS min 481px */
+
+/* MEDIA QUERIES DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 85%;
+  }
+
+  .main-header > h1 {
+    font-size: 3rem;
+    color: #680d1b;
+  }
+
+  .home-photo-wrapper {
+    max-width: 50%;
+  }
+  .nav-top {
+    border-bottom: 4px solid #273b0c;
+  }
+  .nav-top ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .nav-top ul li {
+    margin: 1rem 0;
+  }
+
+  .grid-container {
+    border: solid 2px rgb(214, 195, 195);
+    margin: 2rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto 1fr auto;
+    grid-row-gap: 8px;
+    grid-template-areas:
+      "intro intro"
+      "tricks extra"
+      "conclusion conclusion";
+  }
+
+  .magnifying-glass {
+    /* width: 10%; */
+    max-width: 3%;
+  }
+
+  footer p {
+    font-size: 0.8em;
+    color: rgb(218, 217, 129);
+    padding-top: 0.5em;
+  }
+}
