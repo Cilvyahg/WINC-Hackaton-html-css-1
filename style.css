@@ -11,6 +11,9 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ffe8d6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -106,6 +109,7 @@ li {
 .conclusion {
   padding: 2rem;
   line-height: 1.6;
+  font-size: 1.2rem;
 }
 
 .intro-text-pro {
@@ -114,7 +118,7 @@ li {
 }
 
 .tricks-pro {
-  background-color: rgba(231, 170, 179, 0.379);
+  background-color: #efb3cf61;
   grid-area: tricks;
 }
 
@@ -140,9 +144,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  width: auto;
-  margin-top: 3rem;
+  padding: 0.5rem;
+  margin-top: auto;
 }
 
 footer p {
@@ -156,9 +159,10 @@ footer p {
   height: auto;
 }
 
-/* ABOUT - PAGE  */
+/* ---- ABOUT - PAGE  */
 
 .about-me-main {
+  margin: 3rem auto;
   display: flex;
   justify-content: center;
 }
@@ -169,52 +173,75 @@ footer p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: solid 2px black;
-}
-
-/* .about-me-image {
-  border: solid 1px black;
-  max-width: 90%;
+  width: 90%;
   height: auto;
-} */
+}
 
 .pink_sky {
   height: auto;
-  width: 50%; 
-  /* je moet altijd 50% breed zijn tenzij je buiten de min of max komt */
-  min-width: 200px;
-  max-width: 700px;
+  width: 50%;
+  min-width: 20rem;
+  max-width: 60rem;
   border-radius: 200px;
+  box-shadow: 0px 0px 20px rgb(45, 46, 50);
+  flex-shrink: 0;
+  margin-bottom: 3rem;
 }
-
 
 .about-me-text {
-  border: 2px solid black;
-  width: 90%;
+  max-width: 90%;
   height: auto;
-  padding: 4rem;
-  background-color:rgb(214, 195, 195);
-  margin-top: 2rem;
-
+  padding: 3rem;
+  margin-top: 1rem;
+  background: linear-gradient(45deg, #f9f7f9, #fae6f1, #6b756e);
+  flex-shrink: 2;
+  flex-basis: 60rem;
 }
 
-.about-me-text h2 , .random-facts h2 {
+.about-me-text h2,
+.random-facts h2  {
   font-family: "Manrope", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5em;
   text-transform: uppercase;
+  margin: 0.6rem 0;
+}
+
+.about-me-text,
+.random-facts, .info-intro {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 
-.about-me-text, .random-facts {
-  font-size: 1.2rem;
+.random-facts {
+  margin-top: 2rem;
+}
+
+
+/* INFO PAGE */
+
+iframe {
+  max-width: 95%;
+}
+
+.info-video-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  text-align: center;
+  
+}
+
+.info-intro {
+  text-align: center;
+  margin: 5rem auto;
+  color:#241e3b
 }
 
 
 
 
 /* MEDIA QUERIES */
-
-/* MEDIA QUERIES TABLETS min 481px */
 
 /* MEDIA QUERIES DESKTOP */
 
@@ -265,5 +292,18 @@ footer p {
     font-size: 0.8em;
     color: rgb(218, 217, 129);
     padding-top: 0.5em;
+  }
+
+  /* ABOUT ME */
+  .aboutme-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  /* INFO PAGE VIDEOS  */
+
+
+  .info-video-wrapper {
+    flex-direction: row;
+    justify-content: center;
   }
 }
