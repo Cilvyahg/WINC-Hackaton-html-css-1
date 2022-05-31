@@ -25,6 +25,7 @@ li {
 }
 
 /* NAV TOP BAR */
+
 .nav-top {
   background-color: #6b705c;
   border-bottom: solid 2px #273b0c;
@@ -67,7 +68,6 @@ li {
 }
 
 .magnifying-glass {
-  /* width: 10%; */
   max-width: 5%;
   height: auto;
   margin-right: 0.5rem;
@@ -251,14 +251,14 @@ form#contact {
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   align-items: center;
   margin: 3rem auto;
 }
 
 fieldset {
   border: dashed 2px #273b0c;
-  height: auto; 
+  height: auto;
   width: 30%;
   padding: 1rem;
   background-color: rgba(228, 228, 228, 0.232);
@@ -273,8 +273,7 @@ textarea {
   height: 15rem;
 }
 
-
-input[type="radio"]{
+input[type="radio"] {
   accent-color: #f986fb;
 }
 
@@ -314,7 +313,6 @@ span {
   fieldset {
     width: 50%;
   }
-
 }
 
 /* MEDIA QUERIES DESKTOP */
@@ -322,6 +320,16 @@ span {
 @media only screen and (min-width: 1024px) {
   html {
     font-size: 85%;
+  }
+ /* fixed top */
+  main {
+    margin: 10rem 1rem 1rem 1rem;
+  }
+
+  .nav-top {
+    position: fixed;
+    top: 0%;
+    width: 100%;
   }
 
   .main-header > h1 {
@@ -378,9 +386,8 @@ span {
     justify-content: center;
   }
 
-fieldset {
-  width: 40%;
-  height: auto;
-}
-  
+  fieldset {
+    width: 40%;
+    height: auto;
+  }
 }
